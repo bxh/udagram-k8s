@@ -2,5 +2,11 @@ language: minimal
 
 services: docker
 
+env:
+  - DOCKER_COMPOSE_VERSION=1.23.2
+
+before_install:
+  - docker -v && docker-compose -v
+
 install:
   - echo `hello udacity`
